@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
-
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>THE <span>HANG</span>MAN</h1>
     </header>
-    
+
     <div class="container">
         <div class="main">
-            <h2>Bem vindo ao The Hangman</h2>
+            <h2>BEM VINDO AO HANGMAN</h2>
         </div>
 
-        <div class="imagem">AQUI JAS A IMAGEM DE UMA FORCA</div>
-
-        <div class="input">
-            <label>Informe seu nome:</label>
-            <input type="text">
-
-            <label for="theme">Escolha o tema:</label>
-            <select name="theme" id="">
-                <option value="">Escolha o seu tema</option>
-                <option value="harrypotter">Harry Potter</option>
-                <option value="pokemon">Pokemon</option>
-            </select>
+        <div class="imagem">
+            <img src="../assets/man.svg" alt="">
         </div>
+
+
     </div>
+    
+    <footer class="input">
+        <label>INFORME SEU NOME:</label>
+        <input type="text">
+
+        <label for="theme">ESCOLHA O TEMA:</label>
+        <select name="theme" id="">
+            <option value="0">Escolha o seu tema</option>
+            <option value="hp">Harry Potter</option>
+            <option value="pkm">Pokemon</option>
+        </select>
+    </footer>
 </body>
+
 </html>
