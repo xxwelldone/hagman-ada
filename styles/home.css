@@ -1,0 +1,54 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--black);
+  padding: 22px;
+}
+.navbar__btn {
+  background-color: transparent;
+  border: none;
+}
+.main {
+  background-color: var(--background);
+  padding-top: 42px;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  gap: 32px;
+  color: var(--ugly_white);
+  width: 100vw;
+  padding: 32px;
+  height: 100vw;
+}
+.welcome__title {
+  text-align: end;
+  font-size: 1rem;
+}
+.welcome__man {
+  max-height: 144px;
+  max-width: 92px;
+}
+.setup {
+  background-color: var(--black);
+  width: 100vw;
+}
+.setup__form {
+  color: var(--ugly_white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #1e1e22;
+  gap: 30px;
+  padding: 32px;
+  padding-bottom: 78px;
+}
+#name,
+#theme {
+  background-color: var(--ugly_white);
+  width: 267px;
+  height: 44px;
+}
