@@ -5,6 +5,7 @@
   --pink: #ff54cb;
   --bright_green: #0ff180;
   --background: #2e2e32;
+  --border_radius: 5px;
 }
 * {
   margin: 0;
@@ -12,6 +13,7 @@
   box-sizing: border-box;
   font-family: "Ubuntu Mono", monospace;
   font-weight: 700;
+  /* overflow-x:hidden; */
 }
 .navbar {
   display: flex;
@@ -36,9 +38,12 @@
   color: var(--ugly_white);
   width: 100vw;
   padding: 32px;
-  height: 100vw;
+  height: 300px;
 }
-.welcome__title {
+.welcome__title__desktop {
+  display: none;
+}
+.welcome__title__mobile {
   text-align: end;
   font-size: 1rem;
 }
@@ -48,26 +53,38 @@
 }
 .setup {
   background-color: var(--black);
-  width: 100vw;
+  min-height: 100px;
+  width: 100%;
 }
-.setup__form {
+.setup__form__desktop{
+  display: none;
+}
+.setup__form__mobile {
   color: var(--ugly_white);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: #1e1e22;
+  background-color: var(--black);
   gap: 30px;
   padding: 32px;
   padding-bottom: 78px;
 }
+.input__group{
+  display: flex;
+  flex-direction: column;
+}
 #name,
 #theme {
+  text-align: center;
+  border-radius: var(--border_radius);
   background-color: var(--ugly_white);
   width: 267px;
   height: 44px;
+  margin-top: 15px;
 }
 .btn {
+  border-radius: var(--border_radius);
   width: 262px;
   height: 44px;
 }
@@ -83,4 +100,38 @@
   background-color: var(--black);
   color: var(--ugly_white);
   border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    color: var(--ugly_white);
+    width: 100%;
+    height: 100vh;
+  }
+
+  .welcome__title__mobile{
+    display: none;
+  }
+  .welcome__title__desktop{
+    display: block;
+  }
+
+  .setup__form__mobile{
+    display: none;
+  }
+
+  .setup__form__desktop{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .setup__form{
+    order: 1;
+  }
 }
