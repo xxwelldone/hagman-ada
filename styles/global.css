@@ -1,0 +1,33 @@
+:root {
+  --black: #1e1e22;
+  --blue_bright: #bdcffa;
+  --ugly_white: #d9d9d9;
+  --pink: #ff54cb;
+  --bright_green: #0ff180;
+  --background: #2e2e32;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+}
+.btn {
+  width: 262px;
+  height: 44px;
+  border-radius: 5px;
+}
+.--green {
+  background-color: var(--bright_green);
+  border: none;
+}
+.--pink {
+  background-color: var(--pink);
+  border: none;
+}
+.--black {
+  background-color: var(--black);
+  color: var(--ugly_white);
+  border: none;
+}
