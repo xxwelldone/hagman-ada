@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hangman Game</title>
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
   <body>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Hangman Game</title>
+      <link rel="stylesheet" href="/styles/style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet"
+      />
+    </head>
     <header class="header">
       <nav class="navbar">
         <img
@@ -32,29 +31,63 @@
         </button>
       </nav>
     </header>
+    <dialog class="menu-mobile">
+      <ul class="menu-list">
+        <li class="menu-list__item btn --black">DESISTIR</li>
+        <li class="menu-list__item btn --black">REINICIAR</li>
+        <li class="menu-list__item btn --black">PEDIR DICA (-15 PONTOS)</li>
+      </ul>
+    </dialog>
     <main class="main">
       <section class="welcome">
-        <h1 class="welcome__title">BEM VINDO AO THE HANGMAN</h1>
-        <img
-          src="/assets/man.svg"
-          alt="The man"
-          srcset=""
-          class="welcome__man"
-        />
+        <h1 class="welcome__title__mobile">BEM VINDO AO THE HANGMAN</h1>
+        <img src="/assets/man.svg" alt="The man" srcset="" class="welcome__man" />
+  
+        <form class="setup__form__desktop" action="" method="post">
+        <h1 class="welcome__title__desktop">BEM VINDO AO THE HANGMAN</h1>
+  
+          <div class="input__group">
+            <label for="name">INFORME SEU NOME: </label>
+            <input type="text" name="name" id="name" />
+          </div>
+  
+          <div class="input__group">
+            <label for="theme">ESCOLHA O TEMA:</label>
+            <select name="theme" id="theme">
+              <option value="0">Escolha o seu tema</option>
+              <option value="hp">Harry Potter</option>
+              <option value="pkm">Pokemon</option>
+            </select>
+          </div>
+  
+          
+          <button type="submit" class="btn --green">COMEÇAR</button>
+        </form> 
       </section>
       <section class="setup">
-        <form class="setup__form" action="" method="post">
-          <label for="name">INFORME SEU NOME: </label>
-          <input type="text" name="name" id="name" />
-          <label for="theme">ESCOLHA O TEMA:</label>
-          <select name="theme" id="theme">
-            <option value="0">Escolha o seu tema</option>
-            <option value="hp">Harry Potter</option>
-            <option value="pkm">Pokemon</option>
-          </select>
+        <form class="setup__form__mobile" action="" method="post">
+  
+          <div class="input__group"></select>
+            <label for="name">INFORME SEU NOME: </label>
+            <input type="text" name="name" id="name" />
+          </div>
+  
+          <div class="input__group">
+            <label for="theme">ESCOLHA O TEMA:</label>
+            <select name="theme" id="theme">
+              <option value="0">Escolha o seu tema</option>
+              <option value="hp">Harry Potter</option>
+              <option value="pkm">Pokemon</option>
+            </select>
+          </div>
+  
+          
           <button type="submit" class="btn --green">COMEÇAR</button>
         </form>
       </section>
     </main>
+    <script type="module" src="/js/main.js"></script>
   </body>
 </html>
+
+
