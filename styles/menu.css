@@ -8,6 +8,9 @@
   height: 90%;
   width: 100%;
 }
+.desktop-menu-list {
+  display: none;
+}
 .menu-list {
   list-style: none;
   display: flex;
@@ -21,4 +24,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 768px) {
+  .navbar__btn {
+    display: none;
+  }
+  .desktop-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--ugly_white);
+  }
 }
