@@ -48,8 +48,21 @@
           srcset=""
           class="welcome__man"
         />
+        <div class="setup --desktop">
+          <form class="setup__form" action="" method="post">
+            <label for="name">INFORME SEU NOME: </label>
+            <input type="text" name="name" id="name" />
+            <label for="theme">ESCOLHA O TEMA:</label>
+            <select name="theme" id="theme">
+              <option value="0">Escolha o seu tema</option>
+              <option value="hp">Harry Potter</option>
+              <option value="pkm">Pokemon</option>
+            </select>
+            <button type="submit" class="btn --green">COMEÇAR</button>
+          </form>
+        </div>
       </section>
-      <section class="setup">
+      <section class="setup --mobile">
         <form class="setup__form" action="" method="post">
           <label for="name">INFORME SEU NOME: </label>
           <input type="text" name="name" id="name" />
