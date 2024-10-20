@@ -44,15 +44,23 @@
   align-items: flex-start;
   background-color: #1e1e22;
   gap: 30px;
-  padding: 32px;
+  padding: 24px;
   padding-bottom: 78px;
 }
-
+.--mobile {
+  display: flex;
+  justify-content: center;
+}
 #name,
 #theme {
   background-color: var(--ugly_white);
   width: 267px;
   height: 44px;
+}
+.input {
+  padding-inline: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
