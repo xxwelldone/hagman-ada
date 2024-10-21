@@ -19,6 +19,9 @@ const characterNaruto = selectCharacter(retornoNaruto, "naruto");
 const characterAvatar = selectCharacter(retornoAvatar, "avatar");
 const characterDragonBall = selectCharacter(retornoDragonBall, "DragonBall");
 
+const params = new URLSearchParams(window.location.search);
+console.log(params)
+
 console.log("RETORNO MAIN", characterDragonBall);
 
 // console.log(retorno);
