@@ -1,6 +1,7 @@
 import menuMobile from "./menu-mobile.js";
 import { ApiClient } from "./services/apiClient.js";
 import { inicialHandler, wordHandler } from "./services/Handler.js";
+import { tipHandler } from "./services/tipHandler.js";
 
 const dragonBall = "https://dragonball-api.com/api/characters";
 const avatar = "https://last-airbender-api.fly.dev/api/v1/characters";
@@ -13,3 +14,4 @@ let name = retorno.characters[0].name;
 inicialHandler(name);
 
 wordHandler(name);
+tipHandler();

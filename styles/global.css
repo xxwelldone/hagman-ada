@@ -18,6 +18,7 @@
   height: 44px;
   border-radius: 5px;
 }
+
 .--green {
   background-color: var(--bright_green);
   border: none;
@@ -30,4 +31,15 @@
   background-color: var(--black);
   color: var(--ugly_white);
   border: none;
+}
+.warning {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: var(--pink);
+  color: var(--black);
 }
