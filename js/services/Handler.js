@@ -20,11 +20,16 @@ export function wordHandler(word) {
   keyboard.forEach((key) => {
     key.addEventListener("click", (event) => {
       if (guessWord.includes(event.target.innerText)) {
+        console.log(key);
+
+        key.style.backgroundColor = "#0ff180";
         guessWord.forEach((character, index) => {
           if (character === event.target.innerText) {
             renderHtmlHandler(character, index);
           }
         });
+      } else {
+        key.style.backgroundColor = "#ff54cb";
       }
     });
   });
