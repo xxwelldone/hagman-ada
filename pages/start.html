@@ -34,7 +34,7 @@
         <ul class="desktop-menu-list">
           <li class="desktop-menu-list__item">DESISTIR</li>
           <li class="desktop-menu-list__item">REINICIAR</li>
-          <li class="desktop-menu-list__item">PEDIR DICA</li>
+          <li class="desktop-menu-list__item tip">PEDIR DICA</li>
         </ul>
       </nav>
     </header>
@@ -43,11 +43,21 @@
       <ul class="menu-list">
         <li class="menu-list__item btn --black">DESISTIR</li>
         <li class="menu-list__item btn --black">REINICIAR</li>
-        <li class="menu-list__item btn --black">PEDIR DICA (-15 PONTOS)</li>
+        <li class="menu-list__item btn --black tip">PEDIR DICA (-15 PONTOS)</li>
       </ul>
     </dialog>
     <main class="main__start">
-      <section class="screen">BONECO</section>
+      <section class="screen">
+        <div class="match">
+          <img src="/assets/start/Hang.svg" alt="" srcset="" />
+        </div>
+        <div class="warning --warning-screen">
+          <p>Você não tem mais dicas disponíveis</p>
+        </div>
+        <div class="infos">
+          <div class="infos__tips"></div>
+        </div>
+      </section>
       <section class="game__container">
         <div class="guess__word">
           <!-- <span class="guess__letter">F</span>
