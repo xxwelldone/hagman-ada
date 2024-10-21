@@ -30,6 +30,7 @@ export function wordHandler(word) {
         });
       } else {
         key.style.backgroundColor = "#ff54cb";
+        key.disabled = true;
       }
     });
   });
