@@ -3,7 +3,6 @@ import { selectCharacter } from "./services/selectCharacter.js";
 import { ApiClient } from "./services/apiClient.js";
 import { inicialHandler, wordHandler } from "./services/Handler.js";
 import { tipHandler } from "./services/tipHandler.js";
-// import { usedLettersHandler } from "./services/usedLettersHandler.js";
 
 const naruto = "https://dattebayo-api.onrender.com/characters?limit=150";
 const avatar =
