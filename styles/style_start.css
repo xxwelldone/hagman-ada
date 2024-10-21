@@ -1,89 +1,131 @@
-.main__start{
-    background-color: var(--black);
+.main__start {
+  background-color: var(--black);
+}
+.screen {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+  width: 100vw;
+  background-color: var(--black);
+}
+.info-type {
+  color: var(--ugly_white);
+}
+.infos__tips {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+.game__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.guess__word {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.guess__letter {
+  margin: 10px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--ugly_white);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.line__1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  margin-bottom: 2px;
+}
+
+.line__2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  margin-bottom: 10px;
+}
+
+.btn__kb {
+  width: 28px;
+  height: 28px;
+  background-color: var(--ugly_white);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.info__tip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 262px;
+  height: 44px;
+  border-radius: 5px;
+}
+.--warning-screen {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .line__1 {
+    gap: 2px;
+    margin-bottom: 5px;
   }
-  .screen{
-    background-color: var(--background);
+
+  .line__2 {
+    gap: 2px;
+    margin-bottom: 20px;
   }
-  
-  .game__container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .guess__word{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-  }
-  
-  .guess__letter{
-    margin: 10px 0 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    background-color: var(--ugly_white);
-    border-radius: 5px;
-    text-align: center;
+
+  .guess__letter {
+    margin: 20px 0;
+    width: 56px;
+    height: 56px;
     font-size: 32px;
-    font-weight: bold;
-  }
-  
-  .keyboard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .line__1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1px;
-    margin-bottom: 2px;
-  }
-  
-  .line__2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1px;
-    margin-bottom: 10px;
-  }
-  
-  .btn__kb{
-    width: 28px;
-    height: 28px;
-    background-color: var(--ugly_white);
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
   }
 
-  @media screen and (min-width: 768px){
-    .line__1{
-        gap: 2px;
-        margin-bottom: 5px;
-    }
-      
-      .line__2{
-        gap: 2px;
-        margin-bottom: 20px;
-    }
-
-    .guess__letter{
-        margin: 20px 0;
-        width: 56px;
-        height: 56px;
-        font-size: 32px;
-    }
-
-    .btn__kb{
-        width: 56px;
-        height: 56px;
-        font-size: 32px;
-
-    }
+  .btn__kb {
+    width: 56px;
+    height: 56px;
+    font-size: 32px;
   }
+}
+@media screen and (min-width: 768px) {
+  .screen {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .infos {
+    background: none;
+    width: initial;
+  }
+}
