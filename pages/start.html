@@ -18,9 +18,11 @@
     <header class="header">
       <nav class="navbar">
         <a href="main.html">
-          <img src="/assets/THE HANGMAN.svg" 
-          class="navbar__logo" 
-          alt="logo The Hangman" />
+          <img
+            src="/assets/THE HANGMAN.svg"
+            class="navbar__logo"
+            alt="logo The Hangman"
+          />
         </a>
         <button class="navbar__btn">
           <img
@@ -49,88 +51,40 @@
       <section class="screen">
         <div class="match">
           <img src="/assets/start/Hang.svg" alt="" srcset="" />
-          <div class="hangman">
-            <!-- <img
-              class="hagman__body"
-              src="/assets/start/head.svg"
-              alt=""
-              srcset=""
-            />
-            <img
-              class="hagman__body"
-              src="/assets/start/left arm.svg"
-              alt=""
-              srcset=""
-            />
-            <img
-              class="hagman__body"
-              src="/assets/start/left leg.svg"
-              alt=""
-              srcset=""
-            />
-            <img
-              class="hagman__body"
-              src="/assets/start/body.svg"
-              alt=""
-              srcset=""
-            />
-            <img
-              class="hagman__body"
-              src="/assets/start/right arm.svg"
-              alt=""
-              srcset=""
-            />
-            <img
-              class="hagman__body"
-              src="/assets/start/right leg.svg"
-              alt=""
-              srcset=""
-            /> -->
-          </div>
+          <div class="hangman"></div>
         </div>
         <div class="warning --warning-screen">
           <p>Você não tem mais dicas disponíveis</p>
         </div>
         <div class="infos">
-          <div class="infos__tips"></div>
+          <div class="final__message__lose">
+            <div>
+              <p class="info-type">VOCÊ PERDEU</p>
+            </div>
+            <div>
+              <p class="info__match --pink">VER RANK</p>
+            </div>
+            <p class="info__match --pink">SUA PONTUAÇÃO</p>
+            <div class="info__match --pink">
+              <p>${score} PONTOS</p>
+            </div>
+          </div>
+          <div class="final__message__victory">
+            <div>
+              <p class="info-type">VOCÊ GANHOU</p>
+            </div>
+            <div>
+              <p class="info__match --green">VER RANK</p>
+            </div>
+            <p class="info__match --green">SUA PONTUAÇÃO</p>
+            <div class="info__match --green">
+              <p>${score} PONTOS</p>
+            </div>
+          </div>
         </div>
-
-        <div class="final__message__lose">
-          <p class="you__lose">VOCÊ PERDEU</p>
-  
-          <button class="btn --pink">
-              VER RANK
-          </button>
-  
-          <p class="you__win">SUA PONTUAÇÃO</p>
-          <button class="btn --pink">
-              ${score} PONTOS
-          </button>
-      </div>
-  
-      <hr>
-  
-      <div class="final__message__victory">
-          <p class="you__win">VOCÊ GANHOU!</p>
-  
-          <button class="btn --green">
-              VER RANK
-          </button>
-  
-          <p class="you__win">SUA PONTUAÇÃO</p>
-          <button class="btn --green">
-              ${score} PONTOS
-          </button>
-      </div>
-
       </section>
       <section class="game__container">
-        <div class="guess__word">
-          <!-- <span class="guess__letter">F</span>
-          <span class="guess__letter"></span>
-          <span class="guess__letter"></span>
-          <span class="guess__letter">K</span> -->
-        </div>
+        <div class="guess__word"></div>
         <div class="keyboard">
           <div class="line__1">
             <button class="btn__kb">Q</button>

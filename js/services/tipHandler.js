@@ -10,7 +10,7 @@ export function tipHandler(apiTip) {
 }
 function renderTip(apiTip) {
   if (counter < 3) {
-    const infosTips = document.querySelector(".infos__tips");
+    const infosTips = document.querySelector(".infos");
     const infoType = document.createElement("p");
     infoType.setAttribute("class", "info-type");
     infoType.innerText = "Dica";

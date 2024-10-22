@@ -8,8 +8,6 @@ function openCloseMenu(event) {
   if (modal.open != true) {
     modal.show();
   } else {
-    console.log("entrou");
-
     modal.close();
   }
 }

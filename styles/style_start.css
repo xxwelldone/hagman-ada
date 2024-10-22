@@ -1,4 +1,4 @@
-body{
+body {
   background-color: var(--black);
 }
 .main__start {
@@ -10,20 +10,18 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 50vh;
 }
 
-.match{
-  display: flex; 
+.match {
+  display: flex;
   /* display: none; para o js */
 }
 
 .infos {
   display: flex;
-  /* display: none; para o js */
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+
   gap: 16px;
   padding: 32px;
   width: 100vw;
@@ -32,12 +30,7 @@ body{
 .info-type {
   color: var(--ugly_white);
 }
-.infos__tips {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  justify-content: center;
-}
+
 .game__container {
   display: flex;
   justify-content: center;
@@ -103,40 +96,13 @@ body{
 .--warning-screen {
   display: none;
 }
-
-
-
-.final__message__lose{
-  display: none;
-  flex-direction: column;
+.info__match {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
 }
-
-.final__message__victory{
-  display: none;
-  flex-direction: column;
-}
-
-.you__lose{
-  font-weight: bold;
-  font-size: 16px;
-  color: var(--pink);
-}
-
-.you__win{
-  font-weight: bold;
-  font-size: 16px;
-  color: var(--green);
-}
-
-.see__rank__lose{
-  background-color: var(--pink);
-}
-
-.see__rank__victory{
-  background-color: var(--green);
-}
-
-
 
 .hangman {
   display: grid;
@@ -175,6 +141,16 @@ body{
 }
 .match {
   display: flex;
+}
+.final__message__lose {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+.final__message__victory {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
 }
 
 @media screen and (min-width: 768px) {

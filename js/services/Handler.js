@@ -9,9 +9,9 @@ export function inicialHandler(word) {
   const guessWordDiv = document.querySelector(".guess__word");
   const guessWord = word.split("");
 
-  guessWord.forEach((i) => {
+  guessWord.forEach((character) => {
     let emptySpace = document.createElement("span");
-    if (i === " ") {
+    if (character === " ") {
       emptySpace.innerText = " ";
       emptySpace.style.backgroundColor = "transparent";
     } else {
