@@ -23,7 +23,7 @@ export function selectCharacter(listofCharacters, api) {
         tips: [character.allies[0], character.enemies[0], character.photoUrl]
       };
 
-    case "DragonBall":
+    case "dragonBall":
       randomIndex = parseInt(randomIndex * listofCharacters.items.length);
 
       character = listofCharacters.items[randomIndex];

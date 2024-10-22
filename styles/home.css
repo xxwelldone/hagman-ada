@@ -9,6 +9,9 @@
   background-color: transparent;
   border: none;
 }
+.navbar__logo{
+  cursor: pointer;
+}
 .main {
   background-color: var(--background);
   padding-top: 42px;
@@ -56,13 +59,16 @@
   background-color: var(--ugly_white);
   width: 267px;
   height: 44px;
-}
-.input {
-  padding-inline: 1rem;
+  text-align: center;
   border-radius: 5px;
   font-size: 1rem;
 }
-
+.input {
+  padding-inline: 1rem;
+}
+.btn{
+  cursor: pointer;
+}
 @media (min-width: 768px) {
   .welcome {
     display: grid;
