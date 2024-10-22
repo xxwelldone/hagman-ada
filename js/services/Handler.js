@@ -1,7 +1,10 @@
 import { Hagman } from "./hangman.js";
 import { Score } from "./score.js";
+import { MatchValidator } from "./matchValidator.js";
+
 const score = new Score();
 const hangman = new Hagman();
+
 export function inicialHandler(word) {
   const guessWordDiv = document.querySelector(".guess__word");
   const guessWord = word.split("");
@@ -21,7 +24,7 @@ export function inicialHandler(word) {
 export function wordHandler(word) {
   const keyboard = document.querySelectorAll(".btn__kb");
   const guessWord = word.toUpperCase().split("");
-
+  const matchValidator = new MatchValidator(word);
   keyboard.forEach((key) => {
     key.addEventListener("click", (event) => {
       if (guessWord.includes(event.target.innerText)) {
@@ -30,6 +33,7 @@ export function wordHandler(word) {
         guessWord.forEach((character, index) => {
           if (character === event.target.innerText) {
             renderHtmlHandler(character, index);
+            matchValidator.validate();
           }
         });
       } else {
@@ -38,6 +42,7 @@ export function wordHandler(word) {
         score.decrementByError();
         console.log(score.getPts());
         hangman.generateBody();
+        matchValidator.validate();
       }
     });
   });

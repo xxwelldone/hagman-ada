@@ -16,6 +16,7 @@ export class Hagman {
       bodyPart.setAttribute("src", this.bodyParts[Hagman.counter]);
       hangman.append(bodyPart);
       Hagman.counter++;
+      console.log(Hagman.counter);
     }
   }
 }
