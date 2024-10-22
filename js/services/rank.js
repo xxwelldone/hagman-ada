@@ -1,9 +1,16 @@
-let player = 'pedro' //window.prompt('Digite o seu nick')
+// let player = 'pedro' //window.prompt('Digite o seu nick')
 
-let score = 85 //window.prompt('Digite seu score')
+// let score = 85 //window.prompt('Digite seu score')
+
+const params = new URLSearchParams(window.location.search);
+
+const player = params.get('nickname')
+const score = params.get('score')
 
 function setRank(){
-    localStorage.setItem(player,score)
+    if(score > 0){
+        localStorage.setItem(player,score)
+    }
 }
 
 setRank()
