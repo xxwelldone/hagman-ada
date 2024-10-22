@@ -8,9 +8,11 @@
   height: 90%;
   width: 100%;
 }
+
 .desktop-menu-list {
   display: none;
 }
+
 .menu-list {
   list-style: none;
   display: flex;
@@ -20,11 +22,34 @@
   gap: 32px;
   color: var(--ugly_white);
 }
+
 .menu-list__item {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.menu-link {
+    color: var(--ugly_white);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-link:hover {
+    color: var(--bright_green);
+}
+
+.desktop-menu-list .menu-link,
+.menu-list .menu-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tip {
+    cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .navbar__btn {
     display: none;
