@@ -5,30 +5,40 @@ import { inicialHandler, wordHandler } from "./services/Handler.js";
 import { tipHandler } from "./services/tipHandler.js";
 
 const naruto = "https://dattebayo-api.onrender.com/characters?limit=150";
-const avatar =
-  "https://last-airbender-api.fly.dev/api/v1/characters?perPage=150&page=1";
+const avatar = "https://last-airbender-api.fly.dev/api/v1/characters?perPage=150&page=1";
 const dragonBall = "https://dragonball-api.com/api/characters?limit=58";
 
 // menuMobile();
 
-const retornoNaruto = await ApiClient(naruto);
-const retornoAvatar = await ApiClient(avatar);
-const retornoDragonBall = await ApiClient(dragonBall);
-
-const characterNaruto = selectCharacter(retornoNaruto, "naruto");
-const characterAvatar = selectCharacter(retornoAvatar, "avatar");
-const characterDragonBall = selectCharacter(retornoDragonBall, "DragonBall");
-
 const params = new URLSearchParams(window.location.search);
-console.log(params)
+const nickname = params.get('name');
+const theme = params.get('theme');
 
-console.log("RETORNO MAIN", characterDragonBall);
+let retorno, character;
 
-// console.log(retorno);
-const retorno = await ApiClient(naruto);
-let name = retorno.characters[0].name;
+console.log
+switch (theme) {
+    case 'naruto':
+        retorno = await ApiClient(naruto);
+        character = selectCharacter(retorno, "naruto");
+        //console.log('naruto')
+        break;
 
-inicialHandler(name);
+    case 'avatar':
+        retorno = await ApiClient(avatar);
+        character = selectCharacter(retorno, "avatar");
+        //console.log('avatar')
+        break;
 
-wordHandler(name);
+    case 'dragonBall':
+        retorno = await ApiClient(dragonBall);
+        character = selectCharacter(retorno, "dragonBall");
+        //console.log('dragonBall')
+        break;
+}
+
+console.log("RETORNO MAIN", character);
+
+inicialHandler(character.name);
+wordHandler(character.name);
 tipHandler();
