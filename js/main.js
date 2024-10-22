@@ -11,21 +11,33 @@ const dragonBall = "https://dragonball-api.com/api/characters?limit=58";
 
 menuMobile();
 
-const retornoNaruto = await ApiClient(naruto);
-const retornoAvatar = await ApiClient(avatar);
-const retornoDragonBall = await ApiClient(dragonBall);
+const params = new URLSearchParams(window.location.search);
+const nickname = params.get("name");
+const theme = params.get("theme");
 
-const characterNaruto = selectCharacter(retornoNaruto, "naruto");
-const characterAvatar = selectCharacter(retornoAvatar, "avatar");
-const characterDragonBall = selectCharacter(retornoDragonBall, "DragonBall");
+let retorno, character;
 
-console.log("RETORNO MAIN", characterDragonBall);
+console.log;
+switch (theme) {
+  case "naruto":
+    retorno = await ApiClient(naruto);
+    character = selectCharacter(retorno, "naruto");
+    //console.log('naruto')
+    break;
 
-// console.log(retorno);
-const retorno = await ApiClient(naruto);
-let name = retorno.characters[0].name;
+  case "avatar":
+    retorno = await ApiClient(avatar);
+    character = selectCharacter(retorno, "avatar");
+    //console.log('avatar')
+    break;
 
-inicialHandler(characterNaruto.name);
+  case "dragonBall":
+    retorno = await ApiClient(dragonBall);
+    character = selectCharacter(retorno, "dragonBall");
+    //console.log('dragonBall')
+    break;
+}
 
-wordHandler(characterNaruto.name);
-tipHandler(characterNaruto.tips);
+inicialHandler(character.name);
+wordHandler(character.name);
+tipHandler(character.tips);
