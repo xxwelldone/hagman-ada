@@ -1,8 +1,10 @@
 import { Hagman } from "./hangman.js";
 import { Score } from "./score.js";
+import { Storage } from "./storage.js";
 
 export class MatchValidator {
-  constructor(apiWord) {
+  constructor(apiWord, nickname) {
+    this.nickname = nickname;
     this.apiWord = apiWord.toUpperCase().split("");
     this.hangman = new Hagman();
     this.score = new Score();
@@ -11,6 +13,7 @@ export class MatchValidator {
     this.match = document.querySelector(".match");
     this.bodyHangman = document.querySelector(".hangman");
     this.arrImg = { lose: "/assets/morto.svg", win: "/assets/vivo.svg" };
+    this.storage = new Storage();
   }
 
   validatePerCharacter() {
@@ -42,6 +45,7 @@ export class MatchValidator {
       this.win.style.display = "flex";
       this.bodyHangman.style.display = "none";
       this.match.innerHTML = `<img src="${this.arrImg.win}" alt="" srcset="">`;
+      this.storage.save(this.score.getPts(), this.nickname);
     } else if (
       (Hagman.counter === 6 || this.score.getPts() === 0) &&
       !this.validatePerCharacter()

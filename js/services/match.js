@@ -2,10 +2,10 @@ import { Hagman } from "./hangman.js";
 import { Score } from "./score.js";
 import { MatchValidator } from "./matchValidator.js";
 
-export class WordHandler {
-  constructor(word) {
+export class Match {
+  constructor(word, nickname) {
     this.guessWord = word.toUpperCase().split("");
-    this.matchValidator = new MatchValidator(word);
+    this.matchValidator = new MatchValidator(word, nickname);
     this.score = new Score();
     this.hangman = new Hagman();
   }
