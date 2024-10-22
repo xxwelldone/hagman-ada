@@ -8,6 +8,10 @@ export class Hagman {
     "/assets/start/right leg.svg",
   ];
   static counter = 0;
+
+  getCounter() {
+    return Hagman.counter;
+  }
   generateBody() {
     if (Hagman.counter < 6) {
       const hangman = document.querySelector(".hangman");
