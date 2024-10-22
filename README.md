@@ -1,4 +1,4 @@
-![LOGO THE HANGMAN](assets/THE HANGMAN.svg)
+<img src="/assets/THE HANGMAN.svg" alt="Logo da THE HANGMANa">
 
 **THE HANGMAN** Este projeto é um jogo interativo da forca, desenvolvido como parte do curso de Front-End, para o final do módulo de programação com Javascript. O jogo permite ao usuário adivinhar palavras, chutando letras ou a palavra completa, e conta com funcionalidades como reinício de partida, exibição de dicas/temas, e uso de teclado virtual. As palavras e dicas são obtidas de uma API externa, tornando o jogo dinâmico e variado.
 
@@ -49,7 +49,10 @@ Siga os passos abaixo para executar o projeto em sua máquina local:
 ---
 
 👤 **Autores**  
-[Wesley Menezes](https://github.com/xxwelldone)  
-[Gekyume Serna](https://github.com/TheBestGekyume)  
+[Wesley Menezes](https://github.com/xxwelldone)
+
+[Gekyume Serna](https://github.com/TheBestGekyume)
+
 [Lidor Brosh](https://github.com/lidorbrosh)
+
 [Pedro Carvalho](https://github.com/pdrLCarvalho)
