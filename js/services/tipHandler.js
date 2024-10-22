@@ -1,11 +1,14 @@
+import { Score } from "./score.js";
+
 let counter = 0;
-export function tipHandler() {
+const score = new Score();
+export function tipHandler(apiTip) {
   const tip = document.querySelectorAll(".tip");
   tip.forEach((item) => {
-    item.addEventListener("click", renderTip);
+    item.addEventListener("click", () => renderTip(apiTip));
   });
 }
-function renderTip(event) {
+function renderTip(apiTip) {
   if (counter < 3) {
     const infosTips = document.querySelector(".infos__tips");
 
@@ -17,10 +20,13 @@ function renderTip(event) {
     const tip = document.createElement("p");
 
     infoTip.setAttribute("class", "info__tip --green");
-    tip.innerText = "TESTE";
+    tip.innerText = apiTip[counter];
 
     infoTip.append(tip);
     infosTips.append(infoType, infoTip);
+    score.decrementByTip();
+    console.log(score.getPts());
+
     counter++;
   } else {
     const modal = document.querySelector(".--warning-screen");

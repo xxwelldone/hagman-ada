@@ -1,4 +1,4 @@
-export default function menuMobile() {
+export function menuMobile() {
   const navbarBtn = document.querySelector(".navbar__btn");
   navbarBtn.addEventListener("pointerdown", openCloseMenu);
 }
