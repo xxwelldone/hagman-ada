@@ -8,9 +8,9 @@ export function selectCharacter(listofCharacters, api) {
       randomIndex = parseInt(randomIndex * listofCharacters.characters.length);
       character = listofCharacters.characters[randomIndex];
       const randomJutsuIndex = parseInt(Math.random() * character.jutsu.length)
-
+ 
       return {
-        name: character.name,
+        name: character.name.split(' ')[0],
         tips: [character.personal.sex, character.jutsu[randomJutsuIndex], character.images[0]]
       };
 
@@ -19,7 +19,7 @@ export function selectCharacter(listofCharacters, api) {
       character = listofCharacters[randomIndex];
 
       return {
-        name: character.name,
+        name: character.name.split(' ')[0],
         tips: [character.allies[0], character.enemies[0], character.photoUrl]
       };
 
@@ -28,7 +28,7 @@ export function selectCharacter(listofCharacters, api) {
 
       character = listofCharacters.items[randomIndex];
       return {
-        name: character.name,
+        name: character.name.split(' ')[0],
         tips: [character.ki, character.race, character.image]
       };
 

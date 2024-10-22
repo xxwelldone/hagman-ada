@@ -36,4 +36,24 @@ function getFiveScores(scores) {
 
 let maioresRanks = getFiveScores(scores);
 
+const rankList = document.querySelector(".rank-list");
+console.log(rankList)
+
+const ranks = getScores();
+
+ranks.forEach((i, index) => {
+  let div = document.createElement("div");
+  div.setAttribute("class", "rank-item --green-bg");
+
+  let span1 = document.createElement("span");
+  span1.innerText = index + 1 + "º";
+  span1.setAttribute("class", "rank-position");
+
+  let span2 = document.createElement("span");
+  span2.innerText = i.nickname;
+  span2.setAttribute("class", "rank-position");
+  div.append(span1, span2);
+  rankList.append(div);
+});
+
 console.log(maioresRanks);

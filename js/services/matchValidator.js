@@ -24,14 +24,15 @@ export class MatchValidator {
       let letters = domLetters[i].innerText;
       console.log("verificar:", letters, this.apiWord[i]);
 
-      if (letters === this.apiWord[i]) {
-        state = true;
+      if (letters !== this.apiWord[i]) {
+        return false;
       } else {
         state = false;
       }
     }
-    return state;
+    return true;
   }
+  
   validateMatch() {
     if (
       this.hangman.getCounter() < 6 &&

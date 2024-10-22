@@ -1,21 +1,31 @@
 export class Storage {
   constructor() {
-    this.rank = [];
+    this.username = '';
+    this.score = 0;
   }
 
-  getAll() {
-    localStorageRank = localStorage.getItem("rank");
-    this.rank = localStorage.getItem("ranks")
-      ? JSON.parse(localStorageRank)
-      : [];
-    ranks.forEach((element) => {
-      render(element);
-    });
+  // getAll() {
+  //   localStorageRank = localStorage.getItem(this.username, this.score);
+  // }
+  getScores() {
+    const scores = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const value = localStorage.getItem(key);
+  
+      scores.push({ nickname: key, score: value });
+    }
+    return scores;
   }
-  save(score, name) {
-    const obj = { name: name, score: score };
-    this.rank.push(obj);
-    console.log(this.rank);
-    localStorage.setItem("ranks", JSON.stringify(this.rank));
+
+  getFiveScores(scores) {
+    scores = scores.sort((a, b) => b.score - a.score);
+    scores = scores.slice(0, 5);
+  
+    return scores;
+  }
+
+  save(score, username) {
+    localStorage.setItem(username, score);
   }
 }
