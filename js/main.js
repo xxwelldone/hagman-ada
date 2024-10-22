@@ -3,7 +3,7 @@ import { selectCharacter } from "./services/selectCharacter.js";
 import { ApiClient } from "./services/apiClient.js";
 
 import { Tip } from "./services/tip.js";
-import { WordHandler } from "./services/wordHandler.js";
+import { Match } from "./services/match.js";
 
 const naruto = "https://dattebayo-api.onrender.com/characters?limit=150";
 const avatar =
@@ -38,10 +38,11 @@ switch (theme) {
     //console.log('dragonBall')
     break;
 }
+console.log(character.name);
 
-const wordHandler = new WordHandler(character.name);
-wordHandler.hideWord();
-wordHandler.validateCharacter();
+const match = new Match(character.name, nickname);
+match.hideWord();
+match.validateCharacter();
 
 const tip = new Tip(character.tips);
 tip.tipHandler();
