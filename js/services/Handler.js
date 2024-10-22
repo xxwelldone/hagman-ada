@@ -1,3 +1,5 @@
+import { Score } from "./score.js";
+const score = new Score();
 export function inicialHandler(word) {
   const guessWordDiv = document.querySelector(".guess__word");
   const guessWord = word.split("");
@@ -6,6 +8,7 @@ export function inicialHandler(word) {
     let emptySpace = document.createElement("span");
     if (i === " ") {
       emptySpace.innerText = " ";
+      emptySpace.style.backgroundColor = "transparent";
     } else {
       emptySpace.innerText = "-";
     }
@@ -20,8 +23,6 @@ export function wordHandler(word) {
   keyboard.forEach((key) => {
     key.addEventListener("click", (event) => {
       if (guessWord.includes(event.target.innerText)) {
-        console.log(key);
-
         key.style.backgroundColor = "#0ff180";
         guessWord.forEach((character, index) => {
           if (character === event.target.innerText) {
@@ -31,6 +32,8 @@ export function wordHandler(word) {
       } else {
         key.style.backgroundColor = "#ff54cb";
         key.disabled = true;
+        score.decrementByError();
+        console.log(score.getPts());
       }
     });
   });
