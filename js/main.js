@@ -1,8 +1,9 @@
 import { menuMobile } from "./menu-mobile.js";
 import { selectCharacter } from "./services/selectCharacter.js";
 import { ApiClient } from "./services/apiClient.js";
-import { inicialHandler, wordHandler } from "./services/Handler.js";
-import { tipHandler } from "./services/tipHandler.js";
+
+import { Tip } from "./services/tip.js";
+import { WordHandler } from "./services/wordHandler.js";
 
 const naruto = "https://dattebayo-api.onrender.com/characters?limit=150";
 const avatar =
@@ -38,6 +39,9 @@ switch (theme) {
     break;
 }
 
-inicialHandler(character.name);
-wordHandler(character.name);
-tipHandler(character.tips);
+const wordHandler = new WordHandler(character.name);
+wordHandler.hideWord();
+wordHandler.validateCharacter();
+
+const tip = new Tip(character.tips);
+tip.tipHandler();
