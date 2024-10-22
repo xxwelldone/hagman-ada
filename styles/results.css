@@ -1,0 +1,29 @@
+.final__message__lose {
+    display: flex;
+    flex-direction: column;
+}
+
+.final__message__victory {
+    display: flex;
+    flex-direction: column;
+}
+
+.you__lose {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--pink);
+}
+
+.you__win {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--green);
+}
+
+.see__rank__lose {
+    background-color: var(--pink);
+}
+
+.see__rank__victory {
+    background-color: var(--green);
+}
