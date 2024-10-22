@@ -1,4 +1,4 @@
-// import { menuMobile } from "./menu-mobile.js";
+import { menuMobile } from "./menu-mobile.js";
 import { selectCharacter } from "./services/selectCharacter.js";
 import { ApiClient } from "./services/apiClient.js";
 import { inicialHandler, wordHandler } from "./services/Handler.js";
@@ -8,7 +8,7 @@ const naruto = "https://dattebayo-api.onrender.com/characters?limit=150";
 const avatar = "https://last-airbender-api.fly.dev/api/v1/characters?perPage=150&page=1";
 const dragonBall = "https://dragonball-api.com/api/characters?limit=58";
 
-// menuMobile();
+menuMobile();
 
 const params = new URLSearchParams(window.location.search);
 const nickname = params.get('name');
@@ -41,4 +41,4 @@ console.log("RETORNO MAIN", character);
 
 inicialHandler(character.name);
 wordHandler(character.name);
-tipHandler();
+tipHandler(character.tips);
