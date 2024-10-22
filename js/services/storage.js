@@ -16,7 +16,6 @@ export class Storage {
     const obj = { name: name, score: score };
     this.rank.push(obj);
     console.log(this.rank);
-
     localStorage.setItem("ranks", JSON.stringify(this.rank));
   }
 }
