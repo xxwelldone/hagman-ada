@@ -1,5 +1,7 @@
+import { Hagman } from "./hangman.js";
 import { Score } from "./score.js";
 const score = new Score();
+const hangman = new Hagman();
 export function inicialHandler(word) {
   const guessWordDiv = document.querySelector(".guess__word");
   const guessWord = word.split("");
@@ -24,6 +26,7 @@ export function wordHandler(word) {
     key.addEventListener("click", (event) => {
       if (guessWord.includes(event.target.innerText)) {
         key.style.backgroundColor = "#0ff180";
+
         guessWord.forEach((character, index) => {
           if (character === event.target.innerText) {
             renderHtmlHandler(character, index);
@@ -34,6 +37,7 @@ export function wordHandler(word) {
         key.disabled = true;
         score.decrementByError();
         console.log(score.getPts());
+        hangman.generateBody();
       }
     });
   });
