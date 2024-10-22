@@ -11,16 +11,20 @@ export function tipHandler(apiTip) {
 function renderTip(apiTip) {
   if (counter < 3) {
     const infosTips = document.querySelector(".infos__tips");
-
     const infoType = document.createElement("p");
     infoType.setAttribute("class", "info-type");
     infoType.innerText = "Dica";
 
     const infoTip = document.createElement("div");
-    const tip = document.createElement("p");
-
+    let tip;
+    if (counter === 2) {
+      tip = document.createElement("img");
+      tip.setAttribute("src", apiTip[counter]);
+    } else {
+      tip = document.createElement("p");
+      tip.innerText = apiTip[counter];
+    }
     infoTip.setAttribute("class", "info__tip --green");
-    tip.innerText = apiTip[counter];
 
     infoTip.append(tip);
     infosTips.append(infoType, infoTip);
