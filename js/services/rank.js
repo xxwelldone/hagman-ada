@@ -37,7 +37,6 @@ function getFiveScores(scores) {
 let maioresRanks = getFiveScores(scores);
 
 const rankList = document.querySelector(".rank-list");
-console.log(rankList)
 
 const ranks = getScores();
 
@@ -55,5 +54,3 @@ ranks.forEach((i, index) => {
   div.append(span1, span2);
   rankList.append(div);
 });
-
-console.log(maioresRanks);

@@ -22,7 +22,6 @@ export class MatchValidator {
 
     for (let i = 0; i < this.apiWord.length; i++) {
       let letters = domLetters[i].innerText;
-      console.log("verificar:", letters, this.apiWord[i]);
 
       if (letters !== this.apiWord[i]) {
         return false;
@@ -32,17 +31,13 @@ export class MatchValidator {
     }
     return true;
   }
-  
+
   validateMatch() {
     if (
       this.hangman.getCounter() < 6 &&
       this.score.getPts() !== 0 &&
       this.validatePerCharacter()
     ) {
-      console.log("hangman.getCounter", this.hangman.getCounter());
-      console.log("score.getPts", this.score.getPts());
-      console.log("validatePerCharacter", this.validatePerCharacter());
-
       this.win.style.display = "flex";
       this.bodyHangman.style.display = "none";
       this.match.innerHTML = `<img src="${this.arrImg.win}" alt="" srcset="">`;
@@ -51,9 +46,6 @@ export class MatchValidator {
       (Hagman.counter === 6 || this.score.getPts() === 0) &&
       !this.validatePerCharacter()
     ) {
-      console.log("hangman.getCounter", this.hangman.getCounter());
-      console.log("score.getPts", this.score.getPts());
-      console.log("validatePerCharacter", this.validatePerCharacter());
       this.lose.style.display = "flex";
       this.bodyHangman.style.display = "none";
       this.match.innerHTML = `<img src="${this.arrImg.lose}" alt="" srcset="">`;

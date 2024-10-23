@@ -23,19 +23,19 @@ switch (theme) {
   case "naruto":
     retorno = await ApiClient(naruto);
     character = selectCharacter(retorno, "naruto");
-    //console.log('naruto')
+
     break;
 
   case "avatar":
     retorno = await ApiClient(avatar);
     character = selectCharacter(retorno, "avatar");
-    //console.log('avatar')
+
     break;
 
   case "dragonBall":
     retorno = await ApiClient(dragonBall);
     character = selectCharacter(retorno, "dragonBall");
-    //console.log('dragonBall')
+
     break;
 }
 console.log(character.name);
