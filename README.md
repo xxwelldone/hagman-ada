@@ -26,9 +26,6 @@ Siga os passos abaixo para executar o projeto em sua máquina local:
    cd nome-do-repositorio
    ```
 
-
-   ```
-
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML**;
