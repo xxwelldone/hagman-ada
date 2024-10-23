@@ -26,15 +26,7 @@ Siga os passos abaixo para executar o projeto em sua máquina local:
    cd nome-do-repositorio
    ```
 
-3. **Instale as dependências**:
 
-   ```bash
-   npm install
-   ```
-
-4. **Execute o projeto**:
-   ```bash
-   npx ts-node .\src\main.ts
    ```
 
 ## 🛠️ Tecnologias Utilizadas
